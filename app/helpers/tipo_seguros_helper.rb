@@ -1,0 +1,2 @@
+module TipoSegurosHelper
+end
