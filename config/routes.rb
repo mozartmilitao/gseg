@@ -1,6 +1,6 @@
 Gseg::Application.routes.draw do
+  root to: "home#index"
   resources :tipo_documentos
-
   resources :tipo_seguros
 
   # The priority is based upon order of creation:
