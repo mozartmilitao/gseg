@@ -1,0 +1,21 @@
+<p>Seguradoras</p>
+<table>
+	<tr>
+		<th>Nome </th>
+		<th>Susep </th>
+		<th> </th>
+		<th> </th>
+ </th>
+	</tr>
+	<% for seguradora in @seguradoras %>
+	<tr>
+		<td><%= seguradora.nome %></td>
+		<td><%= seguradora.susep %></td>		
+		<td><%= link_to 'Mostrar', {:action => 'show', :id => seguradora} %></td>
+		<td><%= link_to 'Editar', {:action => 'edit', :id => seguradora} %></td>
+		<td><%= link_to 'Excluir', seguradora, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+	</tr>
+	<% end %>
+	<br/>
+</table>
+<%= link_to 'Novo', action: 'new' %>

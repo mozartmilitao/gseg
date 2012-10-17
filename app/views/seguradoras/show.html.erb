@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+	<b>Nome: </b>
+	<%= @seguradora.nome %>
+</p>
+<p>
+	<b>Susep: </b>
+	<%= @seguradora.susep %>
+</p>
+
+<%= link_to 'Editar', { :action => 'edit', :id => @seguradora }%>
+<%= link_to 'Voltar', { :action => 'index' }%>

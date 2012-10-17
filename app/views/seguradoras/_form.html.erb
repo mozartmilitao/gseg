@@ -1,0 +1,23 @@
+<%= form_for(@seguradora) do |f| %>
+  <% if @seguradora.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@seguradora.errors.count, "error") %> prohibited this seguradora from being saved:</h2>
+
+      <ul>
+      <% @seguradora.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %><br/>
+	<%= f.label :susep %><br />
+    <%= f.text_field :susep %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
