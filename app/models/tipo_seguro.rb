@@ -1,4 +1,5 @@
 class TipoSeguro < ActiveRecord::Base
   attr_accessible :descricao
-  validates :descricao, presence: true, uniqueness: true
+  validates_presence_of :descricao
+  validates_uniqueness_of :descricao
 end

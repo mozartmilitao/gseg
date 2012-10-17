@@ -1,2 +1,23 @@
-<h1>TipoSeguros#index</h1>
-<p>Find me in app/views/tipo_seguros/index.html.erb</p>
+<h1>Listing tipo_seguros</h1>
+
+<table>
+  <tr>
+    <th>Descricao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tipo_seguros.each do |tipo_seguro| %>
+  <tr>
+    <td><%= tipo_seguro.descricao %></td>
+    <td><%= link_to 'Show', tipo_seguro %></td>
+    <td><%= link_to 'Edit', edit_tipo_seguro_path(tipo_seguro) %></td>
+    <td><%= link_to 'Destroy', tipo_seguro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tipo seguro', new_tipo_seguro_path %>
